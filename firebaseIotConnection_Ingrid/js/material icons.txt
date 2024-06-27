@@ -1,0 +1,6 @@
+00 - 15 = ac_unit
+15 - 20 = sunny
+
+
+lights on = lightbulb
+light off = light_off

@@ -1,0 +1,162 @@
+:root{
+    --default-color: #fff;
+    --background-color: #12121b;
+    --header-color: #04648a;
+}
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    background-color: var(--background-color);
+
+    *{
+        color: var(--default-color);
+    }
+}
+button {
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+header {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--header-color);
+    box-shadow: 0 10px 20px 2px rgba(112, 112, 112, 0.61);
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top {
+    margin: 2rem;
+}
+
+.centralize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    flex-wrap: wrap;
+    gap: .25rem;
+    background-color: hsla(0, 0%, 100%, 0.418);
+    box-shadow: 0 0 20px rgb(5, 113, 156);
+    border-radius: 2rem;
+    overflow: hidden;
+
+    .place {
+        background-color: var(--background-color);
+        border-radius: 15px;
+        min-width: 40rem;
+        min-height: 40rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem ;
+
+        .light-bulb{
+            transform: rotate(180deg);
+            
+            span {
+                font-size: 80px
+            }
+
+            .light-on {
+                color: yellow;
+                filter: drop-shadow(0 0 10px rgb(245, 255, 106));
+            }
+        }
+
+        .temperature-details {
+            width: 100%;
+
+            .temperature{
+
+                .material-symbols-outlined{
+                    font-size: 30px; 
+                    color: #54accf;                     
+                }
+            }
+
+        }
+
+        .humidity-details {
+            width: 100%;
+            justify-content: space-around;
+
+            .humidity {
+
+                .material-symbols-outlined{
+                    font-size: 30px; 
+                    color: #54accf;                   
+                }
+            }
+            
+        }
+
+        .accessories {
+            *{
+                gap: .5rem;
+            }
+            span {
+                font-size:35px;
+            }
+
+            .tv {
+
+                .material-symbols-outlined{
+                    font-size: 40px; 
+                    color: #54accf;                   
+                }
+            }
+        }
+
+        .content {
+            cursor: pointer;
+        }
+    }
+
+    .div-data {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .div-temperature {
+            display: flex;
+            gap: 50px;
+        }
+    
+        .div-humidity {
+            display: flex;
+            gap: 80px;
+        }
+    
+        .div-tv {
+            display: flex;
+            gap: 200px;
+        }
+
+        .h3-data {
+            margin-left: 20%;
+        }
+    }
+
+    
+}

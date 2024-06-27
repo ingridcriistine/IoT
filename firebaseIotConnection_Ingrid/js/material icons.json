@@ -1,0 +1,16 @@
+{
+    "lights": {
+        "on": "lightbulb",
+        "off": "light_off"
+    },
+
+    "temperature": {
+        "low": "ac_unit",
+        "high": "sunny"
+    },
+    "humidity": {
+        "low": "humidity_low",
+        "mid": "humidity_mid",
+        "high": "humidity_high"
+    }
+}

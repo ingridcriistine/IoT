@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <!-- Add the Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+
+    <script type="module" src="./script.js"></script>
+</head>
+
+<body>
+    <header class="centralize">
+        <h1>Smart Home</h1>
+    </header>
+
+    <main>
+
+        <div class="home centralize">
+            <div class="place" id="LivingRoom">
+                <h2>Living Room</h2>
+                <br>
+                <button class="light-bulb content centralize" onclick="toggleLamp('LivingRoom')">
+                    <span id="lightBulbLivingRoom" class="material-symbols-outlined">lightbulb</span>
+                </button>
+                <br>
+                <div class="div-data">
+                    <div class="div-temperature">
+                        <h3 class="h3-data">Temperature</h3>
+                        <div class="temperature-details centralize icon" >
+                            <span class="temperature centralize">
+                                <span class="material-symbols-outlined">device_thermostat</span>
+                                <h3 id="LivingRoomTemp"></h3>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="div-humidity">
+                        <h3 class="h3-data">Humidity</h3>
+                        <div class="humidity-details centralize icon">
+                            <span class="humidity centralize" onclick="toggleHumid('LivingRoom')">
+                                <span class="material-symbols-outlined">humidity_indoor</span>
+                                <h3 id="LivingRoomHumidity"></h3>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="div-tv">
+                        <h3 class="h3-data">Television</h3>
+                        <div class="accessories content icon">
+                            <button class="tv centralize" onclick="toggleTv('LivingRoom')">
+                                <span class="material-symbols-outlined">tv_gen</span>
+                                <h3 id="LivingRoomTv">OFF</h3>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+</html>
